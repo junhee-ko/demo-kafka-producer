@@ -1,4 +1,4 @@
-package me.jko.kafka.direct;
+package me.jko.kafka.kafka;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,7 +16,7 @@ public class Producer {
   private final KafkaTemplate<Integer, String> template;
   private static final String TOPIC = "jko-topic";
 
-  void produce() {
+  public void produce() {
     template
         .send(TOPIC, "test-message")
         .addCallback(new ListenableFutureCallback<SendResult<Integer, String>>() {

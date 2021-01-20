@@ -1,6 +1,7 @@
-package me.jko.kafka.direct;
+package me.jko.kafka.api;
 
 import lombok.RequiredArgsConstructor;
+import me.jko.kafka.kafka.Producer;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
