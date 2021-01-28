@@ -11,14 +11,14 @@ import org.springframework.util.concurrent.ListenableFutureCallback;
 @Slf4j
 @Component
 @RequiredArgsConstructor
-public class Producer {
+public class MyProducer {
 
   private final KafkaTemplate<Integer, String> template;
-  private static final String TOPIC = "jko-topic";
+  private static final String TOPIC = "this-is-test";
 
   public void produce() {
     template
-        .send(TOPIC, "test-message")
+        .send(TOPIC, "message")
         .addCallback(new ListenableFutureCallback<SendResult<Integer, String>>() {
           @Override
           public void onSuccess(SendResult<Integer, String> result) {

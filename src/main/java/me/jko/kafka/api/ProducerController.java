@@ -1,7 +1,7 @@
 package me.jko.kafka.api;
 
 import lombok.RequiredArgsConstructor;
-import me.jko.kafka.kafka.Producer;
+import me.jko.kafka.kafka.MyProducer;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.GetMapping;
 @RequiredArgsConstructor
 public class ProducerController {
 
-  private final Producer producer;
+  private final MyProducer myProducer;
 
   @GetMapping("/produce")
   public ResponseEntity produce() {
-    producer.produce();
+    myProducer.produce();
 
     return ResponseEntity
         .ok()
