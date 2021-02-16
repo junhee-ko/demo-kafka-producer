@@ -14,7 +14,7 @@
 //import static org.apache.kafka.clients.producer.ProducerConfig.*;
 //
 //@Configuration
-//public class ProducerConfiguration {
+//public class ProducerConfig {
 //
 //  private static final String BOOTSTRAP_SERVERS = "localhost:9091,localhost:9092,localhost:9093";
 //

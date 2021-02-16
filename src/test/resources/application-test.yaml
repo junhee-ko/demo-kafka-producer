@@ -1,6 +1,6 @@
 spring:
   kafka:
-    bootstrap-servers: localhost:9091
+    bootstrap-servers: ${spring.embedded.kafka.brokers}
     template:
       default-topic: my-test-topic
     producer:
